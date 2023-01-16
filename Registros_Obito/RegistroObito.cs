@@ -53,7 +53,7 @@ namespace Registros_Obito
 
 
 
-        private void ClearTextBoxes() //Função para limpar formularios depois de salvar
+        private void ClearTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -147,7 +147,6 @@ namespace Registros_Obito
             DataGridViewRow row = dataGridView1.Rows[indexRow];
 
             txtNumPaciente.Text = $"{row.Cells["numPaciente"].Value}";
-            //txtNumObito.Text = $"{row.Cells["countObito"].Value}";
             txtDataEntrada.Text = $"{row.Cells["dataEntrada"].Value}";
             txtDataSaida.Text = $"{row.Cells["dataSaida"].Value}";
             txtCNS.Text = $"{row.Cells["CNS"].Value}";

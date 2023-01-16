@@ -595,9 +595,8 @@ namespace Consultar_Pacientes
                     formatColumnsCPF();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                //MessageBox.Show("Falha! \n" + ex.Message);
                 MessageBox.Show("Nenhum Registro Enconstrado", "Consulta de Pacientes");
             }
         }
@@ -624,9 +623,8 @@ namespace Consultar_Pacientes
                     formatColumnsCPF();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                //MessageBox.Show("Falha! \n" + ex.Message);
                 MessageBox.Show("Nenhum Registro Enconstrado", "Consulta de Pacientes");
             }
         }
@@ -998,8 +996,6 @@ namespace Consultar_Pacientes
             {
                 throw;
             }
-
-           
 
             chart1.Series.Clear();
             chart1.Titles.Clear();

@@ -8,6 +8,7 @@ namespace Sistema_de_registros_para_Hospitais
 {
     internal class Conn
     {
+
         private static string server = @"DESKTOP-JTN552H\SQLEXPRESS";
         private static string dataBase = "CADASTRO_HOSPITAL";
         private static string user = "sa";

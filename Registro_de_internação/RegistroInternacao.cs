@@ -32,8 +32,7 @@ namespace Registro_de_internação
         public RegistroInternacao()
         {
             InitializeComponent();
-            SelectTable();
-           
+            SelectTable();   
         }
 
         private void SelectTable()
@@ -249,7 +248,7 @@ namespace Registro_de_internação
                 ClearTextBoxes();
                 SelectTable();
             }
-            catch (Exception ex) //Mostra mensagem caso haver falha 
+            catch (Exception ex)
             {
                 MessageBox.Show("Falha! \n" + ex.Message);
             }
@@ -335,8 +334,6 @@ namespace Registro_de_internação
                             rd = cmd.ExecuteReader();
                             rd.Read();
                             txtNumProntuario.Text = rd["numProntuario"].ToString();
-                            //txtDataEntrada.Value = rd.GetDateTime(3);
-                            //txtHoraEntrada.Text = rd.GetValue(14).ToString();
                             txtCNS.Text = rd["CNS"].ToString();
                             txtNomeClinica.Text = rd["clinicaNome"].ToString();
                             txtLocInterna.Text = rd["localizacaoInterna"].ToString();
@@ -371,17 +368,14 @@ namespace Registro_de_internação
                         {
                             da.Fill(dt);
                             this.labelNumPaciente.Text = dt.Rows[0].Field<string>("nome");
-                            //this.labelDataNascimento.Text = dt.Rows[0].Field<int>("dataNascimento").ToString();
                             this.labelNomeMae.Text = dt.Rows[0].Field<string>("nomeMae");
                             this.labelDataNascimento.Text = dt.Rows[0].Field<string>("dataNascimento");
                         }
                     }
                 }
             }
-            catch (Exception ex) //Mostra mensagem caso haver falha 
+            catch (Exception ex) 
             {
-
-                //MessageBox.Show("Falha ao carregar cadastro do paciente!");
                 Console.WriteLine(ex.Message);
             }
 
